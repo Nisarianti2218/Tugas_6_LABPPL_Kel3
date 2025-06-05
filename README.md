@@ -1,3 +1,8 @@
+Anggota Kelompok:
+- Shofia Nurul Huda (2208107010015)
+- Nisa Rianti (2208107010018)
+- Jihan Nabilah (2208107010035)
+
 # 🎉 Buku Tamu Pesta Ulang Tahun
 
 Aplikasi web sederhana yang memungkinkan pengguna mengisi data tamu (nama, email, dan pesan ucapan) secara langsung ke dalam sistem. Aplikasi ini dibuat menggunakan Node.js, Express, dan SQLite dengan tampilan minimalis berbasis EJS. Data yang dimasukkan akan disimpan dalam database SQLite secara sementara di memori, cocok untuk keperluan demo atau testing.
