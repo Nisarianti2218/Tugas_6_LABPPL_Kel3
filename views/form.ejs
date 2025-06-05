@@ -47,4 +47,29 @@ form.ejs
   </style>
 </head>
 
+<body>
+  <h1>Buku Tamu Pesta Ulang Tahun</h1>
+
+  <% if (messages && messages.length> 0) { %>
+    <div class="flash success">
+      <%= messages[0] %>
+    </div>
+    <% } %>
+
+      <% if (locals.flash && locals.flash.error && locals.flash.error.length> 0) { %>
+        <div class="flash error">
+          <%= locals.flash.error[0] %>
+        </div>
+        <% } %>
+
+          <form action="/submit" method="POST">
+            <input type="text" name="name" placeholder="Nama lengkap" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea name="message" rows="4" placeholder="Pesan" required></textarea>
+            <button type="submit">Kirim</button>
+          </form>
+
+          <a href="/list">Lihat daftar tamu</a>
+</body>
+
 </html>
