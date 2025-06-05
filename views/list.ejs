@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Daftar Tamu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 2rem auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    a {
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Daftar Tamu</h1>
+  <a href="/">Kembali ke form</a>
+  <% if (guests.length===0) { %>
+    <p>Belum ada tamu yang mengisi buku tamu.</p>
+    <% } else { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Pesan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% guests.forEach(guest=> { %>
+            <tr>
+              <td>
+                <%= guest.name %>
+              </td>
+              <td>
+                <%= guest.email %>
+              </td>
+              <td>
+                <%= guest.message %>
+              </td>
+            </tr>
+            <% }) %>
+        </tbody>
+      </table>
+      <% } %>
+</body>
+
+</html>
